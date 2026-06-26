@@ -4,6 +4,12 @@ A reusable Salesforce Lightning Web Component for use in **Screen Flows**. It re
 
 ---
 
+## Demo
+
+![Dynamic Record Selector Demo](dynamic-record-selector-demo.gif)
+
+---
+
 ## Features
 
 - Works with any standard or custom object
