@@ -1,0 +1,15 @@
+<template>
+  <lightning-combobox
+    label="{label}"
+    value="{value}"
+    placeholder="Select a record"
+    options="{recordOptions}"
+    onchange="
+      {
+        handleChange;
+      }
+    "
+    required="{required}"
+    message-when-value-missing="Please make a selection."
+  ></lightning-combobox>
+</template>

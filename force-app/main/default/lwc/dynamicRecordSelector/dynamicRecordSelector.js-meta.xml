@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Dynamic Child Record Selector</masterLabel>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property
+                name="objectApiName"
+                type="String"
+                label="Child Object API Name"
+                description="API name of the object to query (e.g. Contact, Custom_Object__c)."
+                role="inputOnly"
+            />
+            <property
+                name="parentFieldApiName"
+                type="String"
+                label="Parent Field API Name"
+                description="API name of the lookup field pointing to the parent (e.g. AccountId, Parent__c)."
+                role="inputOnly"
+            />
+            <property
+                name="parentFieldValue"
+                type="String"
+                label="Parent Field Value"
+                description="The ID of the parent record to filter by."
+                role="inputOnly"
+            />
+            <property
+                name="childRecordLabelField"
+                type="String"
+                label="Child Record Label Field"
+                description="API name of the field shown as the option label in the picklist. Defaults to Name."
+                role="inputOnly"
+            />
+            <property
+                name="sortOrder"
+                type="String"
+                label="Sort Order"
+                description="Sort direction for the records in the picklist."
+                datasource="ASC,DESC"
+                role="inputOnly"
+            />
+            <property
+                name="label"
+                type="String"
+                label="Label"
+                description="The label displayed above the picklist. Defaults to 'Select a record'."
+                role="inputOnly"
+            />
+            <property
+                name="required"
+                type="Boolean"
+                label="Required"
+                description="When enabled, the user must make a selection before proceeding."
+                role="inputOnly"
+            />
+            <property
+                name="value"
+                type="String"
+                label="Selected Record ID"
+                description="The ID of the selected record."
+                role="outputOnly"
+            />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
